@@ -1,3 +1,12 @@
+@局部符号
+@指定rodata段
+.section .rodata
+@指定对齐格式
+.align 2
+str:
+	@ascii字符串
+	.ascii "%s\n\0"
+
 @定义全局符号
 .global MyStrcpy
 @指定text段
@@ -27,15 +36,6 @@ start:
 	pop {a1}
 	@跳转回到父函数
 	mov pc,lr
-
-@局部符号
-@指定rodata段
-.section .rodata
-@指定对齐格式
-.align 2
-str:
-	@ascii字符串
-	.ascii "%s\n\0"
 
 @全局符号
 .global prints

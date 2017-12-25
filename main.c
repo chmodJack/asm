@@ -2,7 +2,7 @@
 int main(int argc,char *argv[])
 {
 	char arr[64];
-	printf("%s\n",MyStrcpy(arr,"Hello"));
+	MyStrcpy(arr,"Hello world!");
 	prints(arr);
     return 0;
 }

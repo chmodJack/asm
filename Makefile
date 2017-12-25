@@ -1,5 +1,6 @@
 TARGET=main
 OBJS+=main.o MyLibs.o
+CROSS=arm-cortex_a9-linux-gnueabi-
 
 all:$(TARGET)
 $(TARGET):$(OBJS)
