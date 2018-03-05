@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CROSS	Makefile	/^CROSS=arm-cortex_a9-linux-gnueabi-$/;"	m
+MyStrcpy	MyLibs.s	/^MyStrcpy:$/;"	l
+TARGET	Makefile	/^TARGET=main$/;"	m
+TEXT_BASE	start.S	/^TEXT_BASE:$/;"	l
+_bss_end_ofs	start.S	/^_bss_end_ofs:$/;"	l
+_bss_start_ofs	start.S	/^_bss_start_ofs:$/;"	l
+_data_abort	start.S	/^_data_abort:		.word data_abort$/;"	l
+_end_ofs	start.S	/^_end_ofs:$/;"	l
+_fiq	start.S	/^_fiq:			.word fiq$/;"	l
+_irq	start.S	/^_irq:			.word irq$/;"	l
+_not_used	start.S	/^_not_used:		.word not_used$/;"	l
+_prefetch_abort	start.S	/^_prefetch_abort:	.word prefetch_abort$/;"	l
+_software_interrupt	start.S	/^_software_interrupt:	.word software_interrupt$/;"	l
+_stext	start.S	/^_stext:$/;"	l
+_undefined_instruction	start.S	/^_undefined_instruction:	.word undefined_instruction$/;"	l
+clear_bss	start.S	/^clear_bss:$/;"	l
+copy_loop_text	start.S	/^copy_loop_text:$/;"	l
+main	main.c	/^int main(int argc,char *argv[])$/;"	f
+prints	MyLibs.s	/^prints:$/;"	l
+relocate_to_text	start.S	/^relocate_to_text:$/;"	l
+reset	start.S	/^reset:$/;"	l
+start	MyLibs.s	/^start:$/;"	l
+str	MyLibs.s	/^str:$/;"	l
