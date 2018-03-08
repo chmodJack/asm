@@ -1,8 +1,19 @@
-CROSS:=arm-none-eabi-
-all:
-	@$(CROSS)as main.s -mcpu=cortex-a8
-	@$(CROSS)objdump -d a.out
-	@$(CROSS)objcopy a.out a.bin -Obinary
-	@od -x a.bin
+TARGET=main
+CROSS=arm-none-eabi-
+CSFLAGS=-c -mcpu=cortex-a8
+CCFLAGS=-c -mcpu=cortex-a8
+
+OBJS+=start.o main.o add.o
+
+all:$(TARGET)
+$(TARGET):$(OBJS)
+	@$(CROSS)gcc -T ./link.ld -nostdlib -o $@ $^
+	@$(CROSS)objdump -D $@
+	@$(CROSS)objcopy $@ $@.bin -Obinary
+	@od -x $@.bin
+%.o:%.s
+	@$(CROSS)gcc $(CSFLAGS) -o $@ $<
+%.o:%.c
+	@$(CROSS)gcc $(CCFLAGS) -o $@ $<
 clean:
-	@rm a.out a.bin -f
+	@rm -f *.out *.bin *.o $(TARGET) $(OBJS)
