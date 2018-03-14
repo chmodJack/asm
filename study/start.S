@@ -17,7 +17,7 @@
  *
  *************************************************************************
  */
-	.globl	_stext
+.globl	_stext
 _stext:
 	b 	reset
 	ldr	pc, _undefined_instruction

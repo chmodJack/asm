@@ -10,10 +10,11 @@ $(TARGET):$(OBJS)
 	@$(CROSS)gcc -T ./link.ld -nostdlib -o $@ $^
 	@$(CROSS)objdump -D $@
 	@$(CROSS)objcopy $@ $@.bin -Obinary
+	@$(CROSS)objcopy $@ $@.hex -Oihex
 	@od -x $@.bin
 %.o:%.s
-	@$(CROSS)gcc $(CSFLAGS) -o $@ $<
+	$(CROSS)gcc $(CSFLAGS) -o $@ $<
 %.o:%.c
-	@$(CROSS)gcc $(CCFLAGS) -o $@ $<
+	$(CROSS)gcc $(CCFLAGS) -o $@ $<
 clean:
-	@rm -f *.out *.bin *.o $(TARGET) $(OBJS)
+	@rm -f *.out *.bin *.hex *.o $(TARGET) $(OBJS)
