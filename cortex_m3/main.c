@@ -14,10 +14,11 @@ int init(int a,int b,int c,int d)
 	return 0;
 }
 */
-
-unsigned char i=0;
+#define LED_ADDR 0xffff0004
 int main(int num,const char* str)
 {
-	i++;
-    return 0;
+	char* p=LED_ADDR;
+	*p='k';
+	char cc=*p;
+	return 0;
 }

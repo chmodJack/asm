@@ -25,6 +25,11 @@ _stext:
 .thumb_func
 .align 2
 reset:
+	ldr r0,=#0xffff0004
+	ldr r1,[r0]
+	ldr r1,=#0xab
+	str r1,[r0]
+
 	mov r0,#1
 	mov r1,#2
 	mov r2,#3
